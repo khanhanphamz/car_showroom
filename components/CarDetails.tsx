@@ -1,6 +1,7 @@
 "use client";
 
 import { CarProps } from "@/types";
+import { generateCarImageUrl } from "@/utils";
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { Fragment } from "react";
@@ -37,7 +38,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-90"
               >
-                <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white text-left shadow-xl transition-all flex flex-col gap-5">
+                <Dialog.Panel className="relative w-full max-w-md max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white text-left shadow-xl transition-all flex flex-col gap-5 p-5">
                   <button
                     type="button"
                     className="absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full"
@@ -55,7 +56,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src="/hero.png"
+                        src={generateCarImageUrl(car, "29")}
                         alt="car model"
                         fill
                         priority
@@ -66,7 +67,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
                     <div className="flex gap-3">
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "33")}
                           alt="car model"
                           fill
                           priority
@@ -75,7 +76,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "13")}
                           alt="car model"
                           fill
                           priority
@@ -84,7 +85,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car, "25")}
                           alt="car model"
                           fill
                           priority
@@ -108,7 +109,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailProps) => {
                           <h4 className="text-grey capitalize">
                             {key.split("_").join(" ")}
                           </h4>
-                          <p className="text-black-100 font-semibold">
+                          <p className="text-black-100 font-semibold capitalize">
                             {value}
                           </p>
                         </div>
