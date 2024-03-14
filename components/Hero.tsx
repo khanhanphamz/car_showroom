@@ -8,12 +8,12 @@ const Hero = () => {
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Find, book, rent a car—quick and super easy!
         </h1>
 
         <p className="sub__title">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem molestias
+          Streamline your car rental experience with our effortless booking
+          process.
         </p>
 
         <Button
